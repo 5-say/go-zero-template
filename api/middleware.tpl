@@ -1,11 +1,14 @@
 package middleware
 
-import "net/http"
+import (
+	"net/http"
+	{{.configImport}}
+)
 
 type {{.name}} struct {
 }
 
-func New{{.name}}() *{{.name}} {
+func New{{.name}}(c {{.config}}) *{{.name}} {
 	return &{{.name}}{}
 }
 
